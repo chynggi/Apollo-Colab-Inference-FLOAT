@@ -18,7 +18,7 @@ def load_audio(file_path):
 
 def save_audio(file_path, audio, samplerate=44100):
     #audio = dBgain(audio, +6)
-    sf.write(file_path, audio.T, samplerate, subtype="PCM_16")
+    sf.write(file_path, audio.T, samplerate, subtype="FLOAT")
 
 def process_chunk(chunk):
     chunk = chunk.unsqueeze(0).cuda()
